@@ -1,14 +1,18 @@
+import LoginForm from '@/components/pages/login/LoginForm';
 import { withAuth } from '@/middlewares/with-auth';
 import { GetServerSideProps, NextPage } from 'next';
-import Link from 'next/link';
+import Head from 'next/head';
 
 interface Props {}
 
 const Login: NextPage<Props> = ({}) => {
   return (
-    <div className='grid place-items-center min-h-full'>
-      <Link href='/'>go to home</Link>
-    </div>
+    <>
+      <Head>
+        <title>Login</title>
+      </Head>
+      <LoginForm />
+    </>
   );
 };
 
